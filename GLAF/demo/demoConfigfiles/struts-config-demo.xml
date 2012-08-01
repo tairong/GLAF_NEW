@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+  
+  <form-beans>  
+    <form-bean name="testForm" type="demoSrc.src.TestActionForm"></form-bean>
+    
+    <form-bean name="baseSampleForm" type="demoSrc.src.BaseSampleForm"></form-bean>
+    <form-bean name="page1024Form" type="demoSrc.src.Page1024Form"></form-bean>
+    <form-bean name="wfTestForm" type="demoSrc.src.WFTestForm"></form-bean>
+    <form-bean name="startFlowForm" type="demoSrc.src.StartFlowForm"></form-bean>
+    <form-bean name="arrayGridForm" type="demoSrc.src.ArrayGridForm"></form-bean>
+    <form-bean name="cellEditingForm" type="demoSrc.src.CellEditingForm"></form-bean>
+    <form-bean name="xlsDoForm" type="demoSrc.src.XlsDoForm"></form-bean>
+    <form-bean name="csvTestForm" type="demoSrc.src.CsvTestFrom"></form-bean>
+  </form-beans>
+  
+  <action-mappings>
+	<action
+	  input="/demo/demoJsp/index.jsp"
+	  path="/index"
+	  name="testForm"
+	  scope="request"
+	  validate="false"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="indexGo" path="/demo/demoJsp/index.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/xlsDo.jsp"
+	  path="/xlsDo"
+	  name="xlsDoForm"
+	  scope="request"
+	  validate="false"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="xlsDo" path="/demo/demoJsp/xlsDo.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/baseSample.jsp"
+	  path="/baseSample"
+	  name="baseSampleForm"
+	  scope="request"
+	  validate="true"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="baseSampleGo" path="/demo/demoJsp/baseSample.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/page1024.jsp"
+	  path="/page1024"
+	  name="page1024Form"
+	  scope="request"
+	  validate="true"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="go1024" path="/demo/demoJsp/page1024.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/testPage.jsp"
+	  path="/testPage"
+	  name="wfTestForm"
+	  scope="request"
+	  validate="true"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="testPageGo" path="/demo/demoJsp/testPage.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/startFlow.jsp"
+	  path="/startFlow"
+	  name="startFlowForm"
+	  scope="request"
+	  validate="true"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="startFlowGo" path="/demo/demoJsp/startFlow.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/extSmaple/array-grid.jsp"
+	  path="/arrayGrid"
+	  name="arrayGridForm"
+	  scope="request"
+	  validate="false"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="indexGo" path="/demo/demoJsp/extSmaple/array-grid.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/extSmaple/cell-editing.jsp"
+	  path="/cellEditing"
+	  name="cellEditingForm"
+	  scope="request"
+	  validate="false"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="indexGo" path="/demo/demoJsp/extSmaple/cell-editing.jsp" />
+	</action>
+	
+	<action
+	  input="/demo/demoJsp/csvTest.jsp"
+	  path="/csvTest"
+	  name="csvTestForm"
+	  scope="request"
+	  validate="false"
+	  type="org.springframework.web.struts.DelegatingActionProxy" >
+	  <forward name="goCsvTest" path="/demo/demoJsp/CsvTest.jsp" />
+	</action>
+	
+  </action-mappings>
+   
+</struts-config>
+

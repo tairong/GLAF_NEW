@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="GLAF">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/sys"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/demo"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/bus"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/base"/>
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/lib" source-path="/lib"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/gqsrc"/>
+        <property name="context-root" value="GLAF"/>
+        <property name="java-output-path" value="/GLAF/build/classes"/>
+    </wb-module>
+</project-modules>
